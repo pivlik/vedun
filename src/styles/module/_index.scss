@@ -12,6 +12,7 @@
   font-weight: 900;
   font-size: 40px;
   font-family: $font-geometria-bold;
+  color: $dark-gray;
 }
 .b-index__main-photo{
   a{
@@ -42,4 +43,21 @@
     font-weight: 700;
     transition: 0.5s;
   }
+}
+
+/////////about
+.b-index__about{
+  position: relative;
+}
+.b-index__about-img{
+  transform: rotate(270deg);
+  margin-top: 100px;
+}
+.b-index__about-text-title{
+  color: $vine-red;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 70px;
+  margin-bottom: 25px;
 }
