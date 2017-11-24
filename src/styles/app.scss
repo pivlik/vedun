@@ -1,0 +1,20 @@
+// BASE
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/settings';
+@import 'base/breakpoints';
+@import 'base/grid';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/global';
+@import 'base/sprites';
+@import 'base/sprites@2x';
+@import 'base/debug';
+@import 'base/animate'; // framework animate.css
+@import 'base/bitrix-reset';
+
+
+// MODULE
+@import 'module/gallery-slick';
+@import 'module/header';
+@import 'module/index';

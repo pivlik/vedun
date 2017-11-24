@@ -1,0 +1,19 @@
+.b-index__main-photo{
+  background-image: url('/img/10.jpg');
+  background-size: cover;
+  height: 620px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.b-index__top-phone {
+  position: absolute;
+  left: 5%;
+  top: 33%;
+  font-weight: 900;
+  font-size: 40px;
+  font-family: $font-geometria-bold;
+}
+.b-index__scroll-portfolio{
+  position: absolute;
+  color: black;
+}

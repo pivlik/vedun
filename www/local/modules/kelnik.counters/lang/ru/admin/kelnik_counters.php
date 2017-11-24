@@ -1,0 +1,3 @@
+<?php
+$MESS['KELNIK_COUNTERS_ADMIN_ENTITY_TITLE'] = 'Установка счетчиков';
+$MESS['KELNIK_COUNTERS_ADMIN_ENTITY_EDIT_NAME'] = 'Счетчики';

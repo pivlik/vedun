@@ -1,0 +1,334 @@
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+
+
+}
+
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+   transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+
+    [dir='rtl'] & {
+        float: right;
+    }
+
+    &:focus{
+        outline: 0;
+    }
+
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+//Менять поведение тут
+.b-gallery-slick__img-full-height {
+    .slick-list,
+    .slick-track {
+        height: 100%;
+    }
+
+    .b-gallery-slide img {
+        height: 100%;
+    }
+}
+
+.b-gallery-slick__full-size {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.b-gallery-slick {
+    position: relative;
+    float: left;
+    //Для зажатия между блоками. Естественно ставить своё
+    width: 33.3%;
+    height: 100%;
+    //рекомендую не менять, чтобы высота слайдов не превышала высоту контейнера
+    .slick-list,
+    .slick-track {
+        max-height: 100%;
+    }
+}
+.b-gallery-slick__base {
+    height: 100%;
+}
+
+//классы соседи для наглядности, можно удалить
+.b-gallery__w {
+    float: left;
+    display: inline-flex;
+    border: 4px solid black;
+    background-color: $black;
+    width: 33.333%;
+    height: 100%;
+}
+
+//Воспроизводим Женин случай и режим края картинки
+.b-gallery-slide__pic {
+    background-image: url('https://www.placecage.com/600/800');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+// точки
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 60px;
+    @media #{$large-up} {
+        bottom: 70px;
+    }
+    button {
+        font-size: 0;
+        background-color: $white;
+        margin: 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        opacity: 0.78;
+        border: none;
+        &:focus{
+            outline: none;
+        }
+    }
+
+    .slick-active {
+        button {
+            background-color: $main-blue;
+        }
+    }
+}
+.b-gallery__wr {
+    height: 50vh;
+}
+
+// стрелки
+.slick-arrow{
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    font-size: 0;
+    border: 0;
+    content: '';
+    width: 31px;
+    height: 31px;
+    cursor: pointer;
+    background-color: transparent;
+    border-bottom: 4px solid $white;
+    border-left: 4px solid $white;
+    z-index: 4;
+    opacity: 0.7;
+    &:focus{
+        outline: none;
+    }
+}
+.slick-prev{
+    transform: rotate(45deg);
+    top: 262px;
+    left: 31px;
+}
+.slick-next{
+    transform: rotate(-130deg);
+    bottom: 296px;
+    right: 31px;
+}
+.b-index__recommendation-slider{
+    .slick-active {
+        button {
+            background-color: $main-blue !important;
+        }
+    }
+    .slick-arrow{
+        border-bottom: 4px solid $gray;
+        border-left: 4px solid $gray;
+        opacity: 0.5;
+    }
+    .slick-prev{
+        transform: rotate(45deg);
+        top: 81px;
+        left: -69px;
+    }
+    .slick-next{
+        bottom: 146px;
+        right: -20px;
+        @media #{$large-up} {
+            bottom: 198px;
+        }
+    }
+    .slick-dots{
+        button{
+            background-color: $light-gray;
+            margin-top: 62px;
+        }
+    }
+
+}
+
+.b-index__partners-slider{
+    .slick-active {
+        button {
+            background-color: $main-blue !important;
+        }
+    }
+    .slick-arrow{
+        border-bottom: 4px solid $gray;
+        border-left: 4px solid $gray;
+        opacity: 0.5;
+    }
+    .slick-prev{
+        transform: rotate(45deg);
+        top: 45px;
+        @media #{$medium-up} {
+            left: -50px;
+        }
+        @media #{$large-up} {
+            left: -70px;
+        }
+    }
+    .slick-next{
+       @media #{$medium-up} {
+            right: -16px;
+            bottom: 40px;
+        }
+        @media #{$large-up} {
+            right: -36px;
+            bottom: 35px;
+        }
+    }
+    .slick-dots{
+        button{
+            background-color: $light-gray;
+            margin-top: 92px;
+        }
+    }
+
+}
+.b-product__info-images{
+    .j-nav-little-slick{
+        .slick-list{
+            padding: 0;
+        }
+        .draggable{
+            padding: 0;
+        }
+    }
+}
+
+.b-header__drop-menu-slider{
+    .slick-arrow{
+        border-bottom: 4px solid $gray;
+        border-left: 4px solid $gray;
+        opacity: 0.5;
+        z-index: 10;
+    }
+    .slick-prev{
+        transform: rotate(45deg);
+        top: 225px;
+        left: 440px;
+    }
+    .slick-next{
+        top: 225px;
+        right: 26px;
+    }
+}
+.b-product__info-images {
+    .slick-dots {
+        bottom: 0;
+        button {
+            background-color: #bfbfbf;
+        }
+        .slick-active {
+            button {
+                background-color: $main-blue !important;
+            }
+        }
+    }
+}
+.margin-buttom-product-slider{
+    .slick-dots {
+        bottom: -7px;
+    }
+}

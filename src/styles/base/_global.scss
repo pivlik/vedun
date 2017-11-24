@@ -1,0 +1,47 @@
+body {
+    color: $base-font-color;
+    text-size-adjust: 100%;
+    width: 100%;
+
+    &.disable-hover,
+    &.disable-hover * {
+        // крайне важдно переопределить pointer-events: auto на дочерних элементах
+        pointer-events: none !important;
+    }
+
+}
+
+a {
+    &[href^='tel:'],
+    &[href^='mailto:'] {
+        white-space: nowrap;
+    }
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+
+// Utility
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.b-ruble {
+    font-family: $font-ruble;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

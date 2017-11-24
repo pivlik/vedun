@@ -1,0 +1,39 @@
+<div class="l-map">
+    <div class="b-map">
+        <!-- если на мобилке карту нужно показывать в попапе, то ничего не меняем-->
+        <!-- если карту нужно показывать всегда выпиливаем .b-map__mobile и все внутренности-->
+        <!-- с .b-btn убираем data-noinit-->
+        <div class="b-map__mobile">
+            <div class="b-map__img"></div>
+            <div class="b-map__btn">
+                <a href="#popup-map" data-target="#map" data-theme="map" class="b-btn j-popup">Развернуть карту</a>
+            </div>
+        </div>
+        <div class="b-map__cnt">
+            <!--include _map-tabs-->
+            <div id="map" data-noinit="data-noinit" class="j-map b-map__base"></div>
+            <div class="b-map__zoom-wrapper">
+                <button type="button" class="b-map__zoom b-map__zoom-in">
+                    <svg class="b-icon__plus ">
+                        <use xlink:href="#plus"></use>
+                    </svg>
+                </button>
+                <button type="button" class="b-map__zoom b-map__zoom-out">
+                    <svg class="b-icon__minus ">
+                        <use xlink:href="#minus"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup-map" class="mfp-hide b-popup">
+    <a href="javascript:;" title="Закрыть" class="b-popup__close">Свернуть карту</a>
+    <div class="b-popup__cnt"></div>
+</div>
+<script>
+    window.map = {};
+    window.map['map'] = {
+        zoom: 15
+    }
+</script>

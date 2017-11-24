@@ -1,0 +1,26 @@
+<div id="callback" class="mfp-hide b-popup">
+    <a href="javascript:;" title="Закрыть" class="b-popup__close">Закрыть попап</a>
+    <div class="b-popup__cnt">
+        <form action="/test/ajax/request.php" data-message="Спасибо, что воспользовались данной услугой. Наш менеджер перезвонит в удобное для вас время.">
+            <div class="b-callback">
+                <div class="b-callback__row">
+                    <div class="b-callback__ttl">Новогодние подарки от компании СПб Реновация</div>
+                </div>
+                <div class="b-callback__row">
+                    <p>Для получения подарка заполните форму обратной связи</p>
+                </div>
+                <div class="b-callback__row">
+                    <label for="callback-1" class="b-callback__lbl">Ваше имя</label>
+                    <input id="callback-1" type="text" name="name" autocomplete="name" placeholder="ФИО" required="required" /> </div>
+                <div class="b-callback__row">
+                    <label for="callback-2" class="b-callback__lbl">Номер телефона</label>
+                    <input id="callback-2" type="tel" name="phone" pattern="^[0-9-()+\s]+$" autocomplete="tel" placeholder="Телефон" required="required" /> </div>
+                <div class="b-callback__row">
+                    <label for="callback-3" class="b-callback__lbl">Номер телефона</label>
+                    <input id="callback-3" type="email" name="email" autocomplete="email" placeholder="email" required="required" /> </div>
+                <div class="b-callback__row">
+                    <input type="submit" value="Перезвоните мне" class="b-btn" /> </div>
+            </div>
+        </form>
+    </div>
+</div>
