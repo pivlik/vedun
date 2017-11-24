@@ -13,6 +13,33 @@
   font-size: 40px;
   font-family: $font-geometria-bold;
 }
+.b-index__main-photo{
+  a{
+    color: $dark-gray;
+    font-size: 30px;
+  }
+}
 .b-index__scroll-portfolio{
   position: absolute;
+  font-size: 40px !important;
+  top: 20%;
+  border: 1px solid $dark-gray;
+  border-radius: 15px;
+  padding: 25px;
+  :hover{
+    font-weight: 700;
+    transition: 0.5s;
+  }
+}
+.b-index__scroll-price{
+  position: absolute;
+  font-size: 40px !important;
+  top: 40%;
+  border: 1px solid $dark-gray;
+  border-radius: 15px;
+  padding: 25px;
+  :hover{
+    font-weight: 700;
+    transition: 0.5s;
+  }
 }

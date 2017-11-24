@@ -1543,6 +1543,10 @@ html.font-loaded {
   font-family: "GeometriaLight", sans-serif;
 }
 
+html a:active {
+  color: #252525;
+}
+
 h1 {
   font-size: 40px;
   line-height: 40px;
