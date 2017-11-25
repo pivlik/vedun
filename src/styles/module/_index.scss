@@ -60,16 +60,13 @@
   position: relative;
   margin-bottom: 25px;
 }
-.b-index__about-img{
- // transform: rotate(270deg);
-}
 .b-index__about-text-title{
   color: $vine-red;
   font-size: 28px;
   text-align: center;
   font-weight: 700;
   margin-top: 70px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 
@@ -108,7 +105,7 @@
 }
 
 //reviews..............
-.b-index__reviews{
+.b-index__reviews-article-wrap{
   overflow: scroll;
   overflow-x: hidden;
   height: 888px;
