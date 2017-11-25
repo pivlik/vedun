@@ -45,9 +45,10 @@
   }
 }
 
-/////////about
+/////////about...............
 .b-index__about{
   position: relative;
+  margin-bottom: 25px;
 }
 .b-index__about-img{
   transform: rotate(270deg);
@@ -60,4 +61,10 @@
   font-weight: 700;
   margin-top: 70px;
   margin-bottom: 25px;
+}
+
+
+//portfolio..................
+.b-index__portfolio-speak-video, .b-index__portfolio-song-video{
+  margin-bottom: 20px;
 }
