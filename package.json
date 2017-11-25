@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "g": "^2.0.1",
-    "gulp-cli": "^1.4.0"
+    "gulp-cli": "^1.4.0",
+    "slick-carousel": "^1.8.1"
   }
 }

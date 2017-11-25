@@ -46,6 +46,13 @@ define('app', ['jquery'], function($) {
             }
         });
     });
+    //Слайдер с отзывами
+    (function ($mygallery) {
+        if (!$mygallery.length) {
+            return;
+        }
+        $($mygallery).slick();
+    })('.j-slick');
 
     // Подключение галерей
     (function($gallerys) {
