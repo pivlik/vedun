@@ -1,5 +1,5 @@
 .b-index__main-photo{
-  background-image: url('/img/10.jpg');
+  background-image: url('/img/17.jpg');
   background-size: cover;
   height: 620px;
   background-repeat: no-repeat;
@@ -9,10 +9,10 @@
   position: absolute;
   left: 5%;
   top: 33%;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 40px;
-  font-family: $font-geometria-extra-light;
-  color: $dark-gray;
+  font-family: $font-geometria-light;
+  color: $vine-red;
 }
 .b-index__main-photo{
   a{
@@ -44,6 +44,16 @@
     transition: 0.5s;
   }
 }
+.b-index__scroll-reviews{
+  border: 1px solid $dark-gray;
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 27.5%;
+  :hover{
+    font-weight: 700;
+    transition: 0.5s;
+  }
+}
 
 /////////about...............
 .b-index__about{
@@ -51,8 +61,7 @@
   margin-bottom: 25px;
 }
 .b-index__about-img{
-  transform: rotate(270deg);
-  margin-top: 100px;
+ // transform: rotate(270deg);
 }
 .b-index__about-text-title{
   color: $vine-red;
@@ -99,10 +108,20 @@
 }
 
 //reviews..............
+.b-index__reviews{
+  overflow: scroll;
+  height: 888px;
+}
+.b-index__reviews-article{
+  margin-bottom: 25px;
+}
 .b-index__reviews-article-image{
   border-radius: 10%;
   float: left;
 }
 .b-index__reviews-article-text{
   padding-top: 5%;
+}
+.padding-top-0{
+  padding-top: 0;
 }
