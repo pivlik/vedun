@@ -1,16 +1,25 @@
 .b-header__nav-li{
   list-style-type: none;
-  padding: 15px 0;
+  padding: 5px 0;
+  @media #{$medium-up} {
+    padding: 15px 0;
+  }
 }
 .b-header__nav{
   text-align: center;
-  display: flex;
-  justify-content: space-around;
-  box-shadow: 0 2px 0 rgba($light-gray ,0.2);
-  border-bottom: 2px solid $light-gray;
+  @media #{$medium-up} {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 2px 0 rgba($light-gray ,0.2);
+    border-bottom: 2px solid $light-gray;
+  }
+
 }
 .b-header__nav-li-link{
-  font-size: 18px;
+  @media #{$large-up} {
+     font-size: 18px;
+  }
+  font-size: 15px;
   color: $dark-gray;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -40,9 +49,12 @@
     }
 }
 .b-header__nav-li-link-logo{
-  font-size: 22px;
+  font-size: 18px;
   font-family: $font-nautilus;
   color: $black;
+  @media #{$large-up} {
+     font-size: 22px;
+  }
 }
 .b-header__logo-title{
   color: $vine-red;

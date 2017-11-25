@@ -87,8 +87,12 @@
   font-family: $font-geometria-light;
   display: inline-block;
   height: 20px;
+  font-size: 12px;
   &:first-child{
     margin-top: 10px;
+  }
+  @media #{$medium-up} {
+      font-size: 15px;
   }
 }
 .b-index__price-text{
@@ -97,8 +101,13 @@
 }
 .b-index__price-numbers{
   font-family: $font-nautilus;
-  font-size: 40px;
+  font-size: 26px;
   margin-top: 13%;
+  text-align: center;
+  @media #{$medium-up} {
+    font-size: 40px;
+    text-align: left;
+  }
 }
 .b-index__price-footer-text{
   margin-top: 50px;
@@ -129,4 +138,18 @@
 }
 .b-index__contacts{
   text-align: center;
+}
+
+//////Оптимизация..............
+.mobi-hidden{
+  display: none;
+  @media #{$medium-up} {
+      display: block;
+  }
+}
+.mobi-show{
+  display: block;
+  @media #{$medium-up} {
+      display: none;
+  }
 }
