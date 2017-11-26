@@ -7,23 +7,31 @@
 }
 .b-index__top-phone {
   position: absolute;
-  left: 5%;
-  top: 33%;
-  font-weight: 700;
-  font-size: 40px;
   font-family: $font-geometria-light;
   color: $vine-red;
+  font-size: 30px;
+  left: 2%;
+  top: 20%;
+  @media #{$large-up} {
+    left: 5%;
+    top: 33%;
+    font-weight: 700;
+    font-size: 40px;
+  }
+
 }
 .b-index__main-photo{
   a{
     color: $dark-gray;
-    font-size: 30px;
+    font-size: 15px;
+    @media #{$large-up} {
+      font-size: 30px;
+    }
   }
 }
 .b-index__scroll-portfolio{
   position: absolute;
-  font-size: 40px !important;
-  top: 20%;
+  top: 10%;
   border: 1px solid $dark-gray;
   border-radius: 15px;
   padding: 25px;
@@ -31,27 +39,36 @@
     font-weight: 700;
     transition: 0.5s;
   }
+  @media #{$large-up} {
+    top: 20%;
+  }
 }
 .b-index__scroll-price{
   position: absolute;
-  font-size: 40px !important;
-  top: 40%;
+  top: 60%;
   border: 1px solid $dark-gray;
   border-radius: 15px;
   padding: 25px;
   :hover{
     font-weight: 700;
     transition: 0.5s;
+  }
+  @media #{$large-up} {
+    top: 40%;
   }
 }
 .b-index__scroll-reviews{
   border: 1px solid $dark-gray;
   border-radius: 15px;
   padding: 25px;
-  margin-top: 27.5%;
+  top: 75%;
+  position: absolute;
   :hover{
     font-weight: 700;
     transition: 0.5s;
+  }
+  @media #{$large-up} {
+    top: 60%;
   }
 }
 
@@ -85,7 +102,6 @@
 }
 .b-index__price-list-li{
   font-family: $font-geometria-light;
-  display: inline-block;
   height: 20px;
   font-size: 12px;
   &:first-child{
@@ -151,5 +167,22 @@
   display: block;
   @media #{$medium-up} {
       display: none;
+  }
+}
+.tablet-hidden{
+  @media #{$medium-up} {
+    display: none;
+  }
+  @media #{$large-up} {
+     display: block;
+  }
+}
+.tablet-show{
+  display: none;
+  @media #{$medium-up} {
+      display: block;
+  }
+  @media #{$large-up} {
+     display: none;
   }
 }
